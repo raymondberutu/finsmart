@@ -1,0 +1,23 @@
+/* PERHATIAN: Jangan pakai @import "tailwindcss" untuk v3 */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@layer base {
+  body {
+    @apply font-sans antialiased bg-gray-50 text-gray-800;
+  }
+}
+
+/* Style tambahan (Glassmorphism, dll) */
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-dark text-white font-semibold py-2.5 px-6 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5;
+  }
+  .glass-card {
+    @apply backdrop-blur-md bg-white/90 border border-white/20 shadow-lg rounded-xl;
+  }
+}
